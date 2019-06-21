@@ -5,11 +5,23 @@ import Simples from './componentes/Simples'
 import { Inverter,MegaSena } from './componentes/Multi'
 import ParImpar from './componentes/ParImpar';
 import Contador from './componentes/Contador';
+import Plataforma from "./componentes/Plataforma";
+import ValidarProps from "./componentes/ValidarProps";
+import Evento from './componentes/Evento';
 
 import { View,StatusBar ,StyleSheet } from 'react-native';
 
 
 export default createDrawerNavigator({
+    Evento:{
+        screen:Evento
+    },
+    ValidarProps:{
+        screen:() => <ValidarProps label="Teste React: " ano={18}/>
+    },
+    Plataforma:{
+        screen:() =><Plataforma/>
+    },
     Contador:{
       screen:() => <Contador numeroInicial={100}/>
     },
