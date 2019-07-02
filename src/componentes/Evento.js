@@ -2,20 +2,20 @@ import React, { Component } from 'react';
 import { View, Text, TextInput } from 'react-native';
 import Padrao from '../estilo/Padrao';
 
-export default class Evento extends Component{
+export default class Evento extends Component {
     state = {
-        texto:null
+        texto: ""
     }
 
-    alterartexto = texto =>{
+    alterartexto = texto => {
         this.setState({ texto })
     }
 
     render() {
-        return(
+        return (
             <View>
                 <Text style={Padrao.fonte40}>{this.state.texto}</Text>
-                <TextInput value={this.state.texto} style={Padrao.input} onChangeText={this.alterartexto}/>
+                <TextInput value={this.state.texto} style={Padrao.input} onChangeText={this.alterartexto} />
             </View>
         )
     }
