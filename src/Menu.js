@@ -11,11 +11,15 @@ import Evento from './componentes/Evento';
 import Avo from "./componentes/ComunicacaoDireta";
 import TextoSincronizado from "./componentes/ComunicacaoIndireta";
 import ListaFlex from "./componentes/ListaFlex";
+import Flex from './componentes/Flex';
 
 import { View, StatusBar, StyleSheet } from 'react-native';
 
 
 export default createDrawerNavigator({
+    Flex: {
+        screen:Flex
+    },
     ListaFlex: {
         screen: ListaFlex,
         navigationOptions: { title: 'Lista (Flex Box)' }
